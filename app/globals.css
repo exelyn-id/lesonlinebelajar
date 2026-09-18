@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #649568;
+  --color-primary-dark: #426B49;
+  --color-primary-light: #EAF3E9;
+  --color-cream: #FEFEF2;
+  --color-white: #FFFFFF;
+  --color-text: #19301F;
+  --color-muted: #607066;
+  --color-border: #DCE8DD;
+  
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: var(--color-white);
+  --foreground: var(--color-text);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-white);
+  background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0;
+  /* Make the dots very faint */
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Pseudo element to fade out the pattern slightly so it's not too harsh */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

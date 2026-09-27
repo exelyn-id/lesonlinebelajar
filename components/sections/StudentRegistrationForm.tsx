@@ -128,35 +128,55 @@ export function StudentRegistrationForm() {
     const waUrl = getRegistrationWhatsAppUrl(formData);
     setSubmittedWhatsAppUrl(waUrl);
 
+    const directGasUrl =
+      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
+      "https://script.google.com/macros/s/AKfycbwOaZ-03xvzILiraUrSESTokOMSAD95_gucGkUQB2GG5n-skyblfi1ByfFzC76o51k/exec";
+
     try {
-      // Kirim via Next.js API Route yang meneruskan ke Google Apps Script (Code.gs)
-      const res = await fetch("/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      let submitted = false;
 
-      const result = await res.json();
+      // 1. Coba kirim via Next.js API Route (serverless proxy)
+      try {
+        const res = await fetch("/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
 
-      // Terlepas dari status Sheets (misal belum setup URL GAS), kita tetap berhasil
-      // dan arahkan calon siswa langsung ke WhatsApp Admin
+        if (res.ok) {
+          submitted = true;
+        }
+      } catch (apiErr) {
+        console.warn("Next.js API route not reachable, trying direct fallback:", apiErr);
+      }
+
+      // 2. Fallback: kirim langsung ke URL Google Apps Script jika di-hosting sebagai static web
+      if (!submitted && directGasUrl) {
+        try {
+          await fetch(directGasUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain" },
+            body: JSON.stringify(formData),
+          });
+        } catch (directErr) {
+          console.warn("Direct fallback error:", directErr);
+        }
+      }
+
       setIsSuccess(true);
 
       // Langsung buka WhatsApp secara otomatis di tab baru
-      const targetUrl = result.waUrl || waUrl;
-      setSubmittedWhatsAppUrl(targetUrl);
-
       setTimeout(() => {
         try {
-          window.open(targetUrl, "_blank", "noopener,noreferrer");
+          window.open(waUrl, "_blank", "noopener,noreferrer");
         } catch {
           // If popup blocked, user can click the manual CTA button
         }
       }, 400);
 
     } catch (err) {
-      console.error("Submission failed, fallback to WA direct:", err);
-      // Fallback: Jika ada error jaringan, tetap tampilkan sukses & buka WhatsApp
+      console.error("Submission error, fallback to WhatsApp:", err);
       setIsSuccess(true);
       setTimeout(() => {
         window.open(waUrl, "_blank", "noopener,noreferrer");

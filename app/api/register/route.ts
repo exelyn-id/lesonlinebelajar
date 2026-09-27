@@ -42,9 +42,14 @@ export async function POST(request: Request) {
 
     const waUrl = getRegistrationWhatsAppUrl(registrationData);
 
+    // URL Google Apps Script Web App resmi LOBE (berfungsi di lokal maupun web asli/production)
+    const DEFAULT_GOOGLE_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbwOaZ-03xvzILiraUrSESTokOMSAD95_gucGkUQB2GG5n-skyblfi1ByfFzC76o51k/exec";
+
     const scriptUrl =
       process.env.GOOGLE_SCRIPT_URL ||
-      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
+      DEFAULT_GOOGLE_SCRIPT_URL;
 
     let savedToSheets = false;
     let sheetResponseInfo = null;

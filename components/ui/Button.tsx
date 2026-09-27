@@ -16,7 +16,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center rounded-full font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-center",
           {
             "bg-primary text-white hover:bg-primary-dark shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95": variant === "primary",
             "border-2 border-primary text-primary hover:bg-primary/10": variant === "outline",
@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             
             "h-10 px-6 py-2 text-sm": size === "default",
             "h-9 rounded-md px-4 text-xs": size === "sm",
-            "h-14 px-8 text-base": size === "lg",
+            "min-h-14 h-auto py-3.5 px-6 sm:px-8 text-sm sm:text-base": size === "lg",
           },
           className
         )}

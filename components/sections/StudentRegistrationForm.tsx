@@ -194,7 +194,7 @@ export function StudentRegistrationForm() {
         <div className="absolute bottom-10 -left-20 w-80 h-80 bg-primary-dark/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-8 max-w-6xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-6xl relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary-dark text-sm font-semibold mb-4">
             <Sparkles className="w-4 h-4 text-primary" />
@@ -217,7 +217,7 @@ export function StudentRegistrationForm() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
-              className="max-w-2xl mx-auto bg-white rounded-3xl border-2 border-primary/30 p-8 md:p-12 shadow-xl text-center relative overflow-hidden"
+              className="max-w-2xl mx-auto bg-white rounded-3xl border-2 border-primary/30 p-5 sm:p-8 md:p-12 shadow-xl text-center relative overflow-hidden"
             >
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
                 <CheckCircle2 className="w-12 h-12 text-primary" />
@@ -240,30 +240,30 @@ export function StudentRegistrationForm() {
                 </div>
               </div>
 
-              <p className="text-muted mb-8 leading-relaxed">
+              <p className="text-muted mb-8 leading-relaxed text-sm sm:text-base">
                 Halaman WhatsApp Admin LOBE sedang dibuka secara otomatis. Jika percakapan belum muncul atau browser memblokir pop-up, silakan klik tombol hijau di bawah ini:
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1EBE5D] text-white shadow-lg shadow-green-600/20 text-base px-8 h-14"
+                  className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1EBE5D] text-white shadow-lg shadow-green-600/20 text-sm sm:text-base px-6 py-3.5 min-h-14 h-auto whitespace-normal text-center flex items-center justify-center gap-2"
                   onClick={() => {
                     window.open(submittedWhatsAppUrl, "_blank", "noopener,noreferrer");
                   }}
                 >
-                  <MessageCircle className="w-6 h-6 mr-2 fill-current" />
-                  Buka WhatsApp Admin Sekarang
+                  <MessageCircle className="w-5 h-5 fill-current shrink-0" />
+                  <span>Buka WhatsApp Admin Sekarang</span>
                 </Button>
 
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto text-sm sm:text-base px-6 py-3.5 min-h-14 h-auto whitespace-normal text-center flex items-center justify-center gap-2"
                   onClick={handleResetForm}
                 >
-                  <RotateCcw className="w-4 h-4 mr-2" />
-                  Daftarkan Siswa Lain
+                  <RotateCcw className="w-4 h-4 shrink-0" />
+                  <span>Daftarkan Siswa Lain</span>
                 </Button>
               </div>
 
@@ -361,7 +361,7 @@ export function StudentRegistrationForm() {
               <div className="lg:col-span-8">
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-white rounded-3xl p-6 md:p-10 border border-border shadow-lg space-y-6"
+                  className="bg-white rounded-3xl p-4 sm:p-7 md:p-10 border border-border shadow-lg space-y-6"
                 >
                   {errorMessage && (
                     <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl">
@@ -619,23 +619,23 @@ export function StudentRegistrationForm() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary-dark text-white font-bold h-14 rounded-2xl shadow-md hover:shadow-lg transition-all text-base flex items-center justify-center gap-2 group cursor-pointer"
+                      className="w-full bg-primary hover:bg-primary-dark text-white font-bold min-h-14 h-auto py-3.5 px-4 sm:px-6 rounded-2xl shadow-md hover:shadow-lg transition-all text-sm sm:text-base flex items-center justify-center gap-2 group cursor-pointer text-center whitespace-normal leading-snug"
                     >
                       {isSubmitting ? (
-                        <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
+                        <span className="flex items-center justify-center gap-2 flex-wrap text-center">
+                          <Loader2 className="w-5 h-5 animate-spin shrink-0" />
                           <span>Menyimpan ke Database & Menghubungkan ke WA...</span>
-                        </>
+                        </span>
                       ) : (
-                        <>
-                          <MessageCircle className="w-5 h-5 fill-current" />
-                          <span>Kirim Pendaftaran & Chat WhatsApp Admin</span>
-                          <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                        </>
+                        <span className="flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap text-center">
+                          <MessageCircle className="w-5 h-5 fill-current shrink-0" />
+                          <span className="font-bold">Kirim Pendaftaran & Chat WhatsApp Admin</span>
+                          <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1 hidden sm:inline-block" />
+                        </span>
                       )}
                     </Button>
 
-                    <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted text-center">
+                    <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted text-center px-1">
                       <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
                       <span>Data otomatis tercatat di Google Sheets & diteruskan langsung ke WhatsApp Admin LOBE</span>
                     </div>

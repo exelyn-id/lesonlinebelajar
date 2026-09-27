@@ -9,6 +9,7 @@ import { LearningExperience } from "@/components/sections/LearningExperience";
 import { FlexibleLearning } from "@/components/sections/FlexibleLearning";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
+import { StudentRegistrationForm } from "@/components/sections/StudentRegistrationForm";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <FlexibleLearning />
         <Testimonials />
         <FAQ />
+        <StudentRegistrationForm />
         <FinalCTA />
       </main>
       <Footer />

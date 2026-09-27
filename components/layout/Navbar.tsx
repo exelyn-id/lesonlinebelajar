@@ -14,6 +14,7 @@ const navLinks = [
   { name: "Keunggulan", href: "#keunggulan" },
   { name: "Testimoni", href: "#testimoni" },
   { name: "FAQ", href: "#faq" },
+  { name: "Form Pendaftaran", href: "#daftar" },
 ];
 
 export function Navbar() {

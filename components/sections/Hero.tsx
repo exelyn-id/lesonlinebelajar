@@ -21,18 +21,18 @@ export function Hero() {
             className="flex-1 text-center lg:text-left z-10"
           >
             <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary-light text-primary font-semibold text-sm">
-              🎓 LES ONLINE BELAJAR
+              🎓 LES ONLINE BELAJAR TK • SD • SMP • SMA
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6 leading-[1.15]">
-              Bantu Anak Belajar Lebih <br className="hidden lg:block" />
+              Les Online Terbaik: Bantu Anak Belajar Lebih <br className="hidden lg:block" />
               <span className="bg-gradient-to-t from-primary/30 to-primary/30 bg-[length:100%_40%] bg-no-repeat bg-bottom pb-1">
                 Nyaman, Fokus,
               </span> dan Terarah.
             </h1>
             
             <p className="text-lg text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Les online untuk TK, SD, SMP, hingga SMA. Semua mata pelajaran, termasuk les materi TKA dan SNBT, dengan tutor berpengalaman dan jadwal yang fleksibel.
+              Bimbingan les online interaktif terpercaya untuk TK, SD, SMP, hingga SMA. Pilihan format kelas <strong>Privat 1-on-1</strong>, <strong>Semi Privat (3–5 siswa)</strong>, dan <strong>Berkelompok (min. 10 siswa)</strong> untuk semua mata pelajaran serta persiapan TKA & SNBT dengan tutor lulusan PTN/PTS terbaik.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">

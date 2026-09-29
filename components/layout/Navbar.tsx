@@ -49,11 +49,15 @@ export function Navbar() {
           <Link href="#beranda" className="flex items-center gap-2 relative z-50">
             <Image
               src="/images/lobe-logo.jpg"
-              alt="LOBE Logo"
-              width={140}
+              alt="LOBE - Les Online Belajar Logo"
+              width={40}
               height={40}
-              className="h-10 w-auto rounded-full object-cover" // Rounded full based on user comment for logo favicon
+              priority
+              className="h-10 w-10 rounded-full object-cover shadow-sm"
             />
+            <span className="font-bold text-lg tracking-tight text-text hidden sm:inline-block">
+              LOBE
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

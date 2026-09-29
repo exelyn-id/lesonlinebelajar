@@ -22,8 +22,8 @@ const highlights = [
   },
   {
     icon: <MonitorPlay className="w-8 h-8 text-primary" />,
-    title: "Online & Fleksibel",
-    desc: "Belajar online dengan jadwal yang disepakati."
+    title: "3 Pilihan Format",
+    desc: "Privat 1-on-1, Semi Privat (3–5 siswa), dan Berkelompok (min. 10 siswa)."
   }
 ];
 

@@ -4,6 +4,7 @@ import { StickyWhatsAppCTA } from "@/components/layout/StickyWhatsAppCTA";
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHighlights } from "@/components/sections/ServiceHighlights";
 import { Programs } from "@/components/sections/Programs";
+import { ClassFormats } from "@/components/sections/ClassFormats";
 import { Benefits } from "@/components/sections/Benefits";
 import { LearningExperience } from "@/components/sections/LearningExperience";
 import { FlexibleLearning } from "@/components/sections/FlexibleLearning";
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <ServiceHighlights />
         <Programs />
+        <ClassFormats />
         <Benefits />
         <LearningExperience />
         <FlexibleLearning />

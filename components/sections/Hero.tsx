@@ -45,7 +45,7 @@ export function Hero() {
             <p className="text-sm font-medium text-muted/80 flex flex-wrap justify-center lg:justify-start items-center gap-2">
               <span>Jadwal fleksibel</span>
               <span className="w-1 h-1 rounded-full bg-border" />
-              <span>1 Tutor 1 Murid</span>
+              <span>Privat • Semi Privat • Berkelompok</span>
               <span className="w-1 h-1 rounded-full bg-border" />
               <span>Online via Google Meet</span>
             </p>

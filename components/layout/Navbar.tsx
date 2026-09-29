@@ -11,10 +11,11 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { name: "Beranda", href: "#beranda" },
   { name: "Program", href: "#program" },
+  { name: "Format Kelas", href: "#format-belajar" },
   { name: "Keunggulan", href: "#keunggulan" },
   { name: "Testimoni", href: "#testimoni" },
   { name: "FAQ", href: "#faq" },
-  { name: "Form Pendaftaran", href: "#daftar" },
+  { name: "Daftar", href: "#daftar" },
 ];
 
 export function Navbar() {

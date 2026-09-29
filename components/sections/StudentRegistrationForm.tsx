@@ -42,9 +42,10 @@ const POPULAR_SUBJECTS = [
 ];
 
 const FORMAT_OPTIONS = [
-  { id: "1on1", label: "1 Tutor 1 Murid", sub: "Privat Fokus (Rekomendasi)" },
-  { id: "semi", label: "Semi-Privat (2-3 Siswa)", sub: "Belajar bersama teman" },
-  { id: "konsul", label: "Konsultasi Dulu", sub: "Diskusi opsi terbaik dengan admin" },
+  { id: "1on1", label: "1 Tutor 1 Murid (Privat)", sub: "Privat Fokus (TK, SD, SMP, SMA, SNBT)" },
+  { id: "semi", label: "Semi Privat (3 - 5 Orang)", sub: "Kelompok kecil seru (Khusus SD, SMP, SMA)" },
+  { id: "kelompok", label: "Kelas Berkelompok (Min. 10 Orang)", sub: "Paling hemat & kolaboratif (Khusus SD, SMP, SMA)" },
+  { id: "konsul", label: "Konsultasi Dulu", sub: "Diskusikan opsi terbaik bersama admin" },
 ];
 
 const TIME_OPTIONS = ["Pagi (08.00 - 11.00)", "Siang (13.00 - 15.00)", "Sore (15.30 - 17.30)", "Malam (18.30 - 21.00)", "Fleksibel / Sesuai Kesepakatan"];
@@ -571,7 +572,7 @@ export function StudentRegistrationForm() {
                       <label className="block text-xs font-semibold text-text uppercase tracking-wider mb-2">
                         Pilihan Format Les
                       </label>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {FORMAT_OPTIONS.map((fmt) => {
                           const isFmtSelected = formData.formatLes?.includes(fmt.label);
                           return (

@@ -104,10 +104,10 @@ export default function RootLayout({
     logo: `${siteUrl}/images/lobe-logo.jpg`,
     description:
       "Layanan les online interaktif untuk jenjang TK, SD, SMP, dan SMA. Tersedia format Privat 1-on-1, Semi Privat (3-5 orang), dan Berkelompok (min. 10 orang) semua mata pelajaran dan materi TKA/SNBT.",
-    telephone: "+6288937394970",
+    telephone: "+6288973394970",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+6288937394970",
+      telephone: "+6288973394970",
       contactType: "customer service",
       areaServed: "ID",
       availableLanguage: ["Indonesian"],

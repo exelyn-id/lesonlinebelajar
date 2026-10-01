@@ -3,7 +3,7 @@
 Website resmi landing page **LOBE (Les Online Belajar)** — Bimbingan belajar online interaktif untuk jenjang **TK, SD, SMP, dan SMA** serta persiapan **TKA & SNBT**.
 
 🌐 **Domain:** [https://lesonlinebelajar.my.id](https://lesonlinebelajar.my.id)  
-📱 **WhatsApp Admin:** [+62 889-3739-4970](https://api.whatsapp.com/send/?phone=6288937394970)
+📱 **WhatsApp Admin:** [+62 889-7339-4970](https://api.whatsapp.com/send/?phone=6288973394970)
 
 ---
 

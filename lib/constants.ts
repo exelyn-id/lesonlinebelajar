@@ -148,6 +148,6 @@ export const faqs = [
   },
   {
     question: "Bagaimana cara mendaftarnya?",
-    answer: "Anda dapat mengisi Formulir Pendaftaran di bagian bawah website ini (tersimpan otomatis di Google Sheets dan diarahkan ke WhatsApp Admin LOBE) atau langsung chat WhatsApp Admin di nomor 0889 3739 4970.",
+    answer: "Anda dapat mengisi Formulir Pendaftaran di bagian bawah website ini (tersimpan otomatis di Google Sheets dan diarahkan ke WhatsApp Admin LOBE) atau langsung chat WhatsApp Admin di nomor 0889 7339 4970.",
   },
 ];

@@ -1,4 +1,4 @@
-export const whatsappNumber = "6288937394970";
+export const whatsappNumber = "6288973394970";
 
 export const defaultWhatsAppMessage =
   "Halo LOBE, saya ingin konsultasi mengenai les online. Saya ingin mengetahui program yang sesuai untuk anak saya.";

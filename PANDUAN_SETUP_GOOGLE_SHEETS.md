@@ -3,7 +3,7 @@
 Fitur formulir pendaftaran siswa di website LOBE telah berhasil dibuat! Formulir ini berfungsi untuk:
 1. **Menerima pendaftaran calon siswa/orang tua secara langsung di website.**
 2. **Menyimpan data otomatis ke database Google Sheets Anda melalui Google Apps Script (`Code.gs`).**
-3. **Mengarahkan calon siswa secara otomatis ke WhatsApp Admin LOBE (+62 889-3739-4970)** dengan template pesan lengkap berisi seluruh data yang telah diisi.
+3. **Mengarahkan calon siswa secara otomatis ke WhatsApp Admin LOBE (+62 889-7339-4970)** dengan template pesan lengkap berisi seluruh data yang telah diisi.
 
 ---
 
@@ -81,6 +81,6 @@ Script `Code.gs` telah dilengkapi fitur **auto-header dan auto-styling**. Begitu
 ## 📱 Alur Otomatis Menuju WhatsApp Admin LOBE
 
 Setelah formulir dikirim dan tersimpan di Google Sheets:
-1. Browser otomatis membuka chat WhatsApp baru ke Admin LOBE: **+62 889-3739-4970**
+1. Browser otomatis membuka chat WhatsApp baru ke Admin LOBE: **+62 889-7339-4970**
 2. Pesan sudah langsung terisi rapi (*pre-filled*) dengan rincian data siswa, memudahkan Admin langsung menyapa dan mencocokkan tutor tanpa perlu bertanya ulang.
 3. Di website juga tampil kartu konfirmasi sukses dan tombol **"Buka WhatsApp Admin Sekarang"** sebagai cadangan jika pop-up browser terblokir.

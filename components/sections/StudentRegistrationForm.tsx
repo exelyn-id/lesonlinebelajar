@@ -289,7 +289,7 @@ export function StudentRegistrationForm() {
               </div>
 
               <p className="text-xs text-muted mt-6">
-                Nomor Resmi Admin LOBE: +62 889-3739-4970 • Respon Cepat & Ramah
+                Nomor Resmi Admin LOBE: +62 889-7339-4970 • Respon Cepat & Ramah
               </p>
             </motion.div>
           ) : (
@@ -373,7 +373,7 @@ export function StudentRegistrationForm() {
                     className="inline-flex items-center gap-2 bg-white text-primary hover:bg-cream font-semibold text-xs py-2.5 px-4 rounded-full transition-all"
                   >
                     <MessageCircle className="w-4 h-4 fill-current" />
-                    Chat WA: 0889 3739 4970
+                    Chat WA: 0889 7339 4970
                   </a>
                 </div>
               </div>
